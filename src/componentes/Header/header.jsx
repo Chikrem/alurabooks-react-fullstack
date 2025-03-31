@@ -1,21 +1,30 @@
-import Logo from './../Logo/logo';
-import Opcoes from './../Opcoes/opcoes';
-import Icones from './../Icones/icones';
+import Logo from "./../Logo/logo";
+import Opcoes from "./../Opcoes/opcoes";
+import Icones from "./../Icones/icones";
 
-import './header.css'
+import styled from "styled-components";
 
-function Header () {
+const AppHeader = styled.header`
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
 
-    return (
-        <header className='App-header'>
-        <Logo />
-        <div className='App-menu'>
-          <Opcoes />
-          <Icones />
-        </div>
-      </header>
-    )
+const AppMenu = styled.div`
+  display: flex;
+`
 
+function Header() {
+  return (
+    <AppHeader>
+      <Logo />
+      <AppMenu>
+        <Opcoes />
+        <Icones />
+      </AppMenu>
+    </AppHeader>
+  );
 }
 
-export default Header
+export default Header;
