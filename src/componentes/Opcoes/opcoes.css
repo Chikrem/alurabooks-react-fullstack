@@ -1,0 +1,12 @@
+.App-lista {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-right: 1rem;
+    font-size: 1.25rem;
+  }
+  
+  .App-item {
+    list-style: none;
+    cursor: pointer;
+  }
