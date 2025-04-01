@@ -7,7 +7,7 @@ import styled from "styled-components";
 const AppHeader = styled.header`
   background-color: white;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 `;
 
