@@ -1,3 +1,4 @@
+import { useState } from "react"
 import Input from "../Input"
 
 import styled from 'styled-components'
@@ -25,13 +26,21 @@ const Subtitulo = styled.h3`
 `
 
 function Pesquisa() {
+ 
+    const [textoDigitado, setTextoDigitado] = useState()  
+
     return (
         <PesquisaContainer>
             <Titulo>Já sabe por onde começar?</Titulo>
             <Subtitulo>Encontre seu livro em nossa estante.</Subtitulo>
             <Input
                 placeholder="Escreva sua próxima leitura"
+                onChange={evento => {
+                    setTextoDigitado(evento.target.value)
+                    console.log(textoDigitado)
+                }}
             />
+            <p>{textoDigitado}</p>
         </PesquisaContainer>
     )
 }
