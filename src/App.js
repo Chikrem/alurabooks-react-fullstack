@@ -1,6 +1,7 @@
 // Início Aula-3
 
 import Header from "./componentes/Header/header";
+import Lancamentos from "./componentes/Lancamentos/lancamentos";
 import Pesquisa from "./componentes/Pesquisa/pesquisa";
 
 import styled from "styled-components";
@@ -16,6 +17,7 @@ function App() {
     <AppContainer>
       <Header />
       <Pesquisa />
+      <Lancamentos />
     </AppContainer>
   );
 }

@@ -23,8 +23,8 @@ const AppIcon = styled.li`
 function Icones() {
   return (
     <AppLista>
-      {icones.map((icone) => (
-        <AppIcon key={icone.key}>
+      {icones.map((icone, index) => (
+        <AppIcon key={index}>
           <img src={icone} alt="ícone"></img>
         </AppIcon>
       ))}
