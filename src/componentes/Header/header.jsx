@@ -3,6 +3,7 @@ import Opcoes from "./../Opcoes/opcoes";
 import Icones from "./../Icones/icones";
 
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 const AppHeader = styled.header`
   background-color: white;
@@ -18,7 +19,9 @@ const AppMenu = styled.div`
 function Header() {
   return (
     <AppHeader>
-      <Logo />
+      <Link to="/">
+       <Logo />
+      </Link>
       <AppMenu>
         <Opcoes />
         <Icones />
