@@ -11,7 +11,7 @@ const PesquisaContainer = styled.section`
         color: #FFF;
         text-align: center;
         padding: 85px 0;
-        height: 270px;
+        height: auto;
         width: 100%;
 `
 
@@ -34,9 +34,13 @@ function Pesquisa() {
     const [livros, setLivros] = useState([])
 
     useEffect(() => {
-        const livrosDaApi = getLivros()
-        setLivros(livrosDaApi)
+        fetchLivros()
     }, [])
+
+    async function fetchLivros() {
+        const livrosDaAPI = await getLivros()
+        setLivros(livrosDaAPI)
+    }
     
     const pesquisaLivro = ( evento ) => {
         const textoDigitado = evento.target.value
