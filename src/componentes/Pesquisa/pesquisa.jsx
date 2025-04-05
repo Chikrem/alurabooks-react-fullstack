@@ -41,7 +41,7 @@ function Pesquisa() {
         const livrosDaAPI = await getLivros()
         setLivros(livrosDaAPI)
     }
-    
+ 
     const pesquisaLivro = ( evento ) => {
         const textoDigitado = evento.target.value
         const resultadoPesquisa = livros.filter(livro => livro.nome.includes(textoDigitado))

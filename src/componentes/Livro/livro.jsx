@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { postFavoritos } from '../../servicos/favoritos';
 
 const Resultado = styled.div`
     display: flex;
@@ -17,11 +18,16 @@ const Resultado = styled.div`
     }
 `
 
+async function insertFavorito(id) {
+    await postFavoritos(id)
+    alert(`Livro de id:${id} inserido!`)
+}
+
 function Livro({ resultados = [] }) {
     return (
         <div>
             {resultados.map(livro => (
-                <Resultado key={livro.nome}>
+                <Resultado onClick={() => insertFavorito(livro.id)} key={livro.nome}>
                     <img src={livro.src} alt="Imagem Livro"></img>
                     <p>{livro.nome}</p>
                 </Resultado>
